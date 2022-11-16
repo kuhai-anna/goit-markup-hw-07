@@ -66,6 +66,10 @@ button {
 	border-radius: 4px;
 }
 
+address {
+	font-style: normal;
+}
+
 .container {
 	width: 1200px;
 	padding-right: 15px;
@@ -76,10 +80,6 @@ button {
 .section {
 	padding-top: 94px;
 	padding-bottom: 94px;
-}
-
-.footer-address {
-	font-style: normal;
 }
 
 .list {
@@ -93,41 +93,43 @@ button {
 }
 
 /* ------------------HEADER----------------- */
-header > .container {
+.header__container {
 	display: flex;
 	align-items: center;
 }
 
-.header-navigation {
+.navigation {
 	display: flex;
 	align-items: center;
 }
 
 /* -------------------LOGO------------------ */
-.header-logo {
-	color: var(--header-logo-color);
-
+.logo {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.19;
 }
 
-.logo-accent {
+.logo--dark {
+	color: var(--header-logo-color);
+}
+
+.logo__accent {
 	color: var(--accent-color);
 }
 
 /* -------------MAIN NAVIGATION------------- */
-.header-list {
+.menu {
 	display: flex;
 	margin-left: 93px;
 }
 
-.header-item + .header-item {
-	margin-left: 50px;
+.menu__item:not(:last-child) {
+	margin-right: 50px;
 }
 
-.header-link {
+.menu__link {
 	position: relative;
 	display: block;
 	padding-top: 32px;
@@ -145,7 +147,7 @@ header > .container {
 	transition-timing-function: var(--timing-function);
 }
 
-.header-link::after {
+.menu__link::after {
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -163,8 +165,8 @@ header > .container {
 	transition-timing-function: var(--timing-function);
 }
 
-.header-link:hover:after,
-.header-link:focus:after {
+.menu__link:hover:after,
+.menu__link:focus:after {
 	transform: scaleX(1);
 }
 
@@ -182,24 +184,24 @@ header > .container {
 	transform: scaleX(1);
 }
 
-.header-link:hover,
-.header-link:focus,
+.menu__link:hover,
+.menu__link:focus,
 .current {
 	color: var(--accent-color);
 }
 
-/* --------------CONTACT LIST--------------- */
-.contacts-list {
+/* -----------------CONNECT----------------- */
+.header__connect {
 	display: flex;
 	margin-right: 0;
 	margin-left: auto;
 }
 
-.contacts-item + .contacts-item {
-	margin-left: 50px;
+.connect__item:not(:last-child) {
+	margin-right: 50px;
 }
 
-.header-contacts {
+.connect__contacts {
 	display: flex;
 	align-items: center;
 
@@ -215,14 +217,17 @@ header > .container {
 	transition-timing-function: var(--timing-function);
 }
 
-.header-contacts:hover,
-.header-contacts:focus {
+.connect__contacts:hover,
+.connect__contacts:focus {
 	color: var(--accent-color);
 }
 
-.header-icon {
-	margin-right: 10px;
+.connect__icon {
 	fill: currentColor;
+}
+
+.connect__icon--prepend {
+	margin-right: 10px;
 }
 
 /* -------------------MAIN------------------ */
@@ -248,7 +253,7 @@ header > .container {
 	background-size: cover;
 }
 
-.hero-title {
+.hero__title {
 	margin: 0 auto;
 	margin-bottom: 30px;
 
@@ -261,10 +266,7 @@ header > .container {
 	text-transform: uppercase;
 }
 
-.hero-btn {
-	padding: 10px 32px;
-	margin: 0 auto;
-
+.btn {
 	color: var(--additional-text-color);
 
 	font-weight: 700;
@@ -278,14 +280,19 @@ header > .container {
 	transition-timing-function: var(--timing-function);
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
+.hero__btn {
+	padding: 10px 32px;
+	margin: 0 auto;
+}
+
+.btn:hover,
+.btn:focus {
 	background-color: var(--accent-button-color);
 }
 
 /* -----------------SECTIONS---------------- */
 
-.section-title {
+.section__title {
 	margin-bottom: 50px;
 
 	color: var(--title-text-color);
@@ -294,10 +301,6 @@ header > .container {
 	font-size: 36px;
 	line-height: 1.17;
 	text-align: center;
-}
-
-.item + .item {
-	margin-left: 30px;
 }
 
 /* -----------------FEATURES---------------- */
@@ -314,22 +317,27 @@ header > .container {
 	margin: -1px;
 }
 
-.features-list {
+.features {
 	display: flex;
+	gap: 30px;
 }
 
-.icon-wrap {
+.features__icon-wrap {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 270px;
 	height: 120px;
-	margin-bottom: 30px;
+
 	border-radius: 4px;
 	background-color: var(--secondary-background-color);
 }
 
-.features-title {
+.features__icon-wrap--above {
+	margin-bottom: 30px;
+}
+
+.features__title {
 	margin-bottom: 10px;
 
 	color: var(--title-text-color);
@@ -340,25 +348,26 @@ header > .container {
 	text-transform: uppercase;
 }
 
-.features-text {
+.features__text {
 	font-size: 14px;
 	line-height: 1.71;
 }
 
 /* --------------WHAT DO WE DO-------------- */
-.section-services {
+.services {
 	padding-top: 0;
 }
 
-.services-list {
+.services__list {
 	display: flex;
+	gap: 30px;
 }
 
-.services-item {
+.services__item {
 	position: relative;
 }
 
-.services-text {
+.services__text {
 	position: absolute;
 	display: flex;
 	justify-content: center;
@@ -383,6 +392,7 @@ header > .container {
 
 .team-cards {
 	display: flex;
+	gap: 30px;
 }
 
 .team-card {
@@ -435,6 +445,8 @@ header > .container {
 	align-items: center;
 	width: 100%;
 	height: 100%;
+
+	background-color: transparent;
 	border-radius: 50%;
 
 	fill: var(--icons-color);
@@ -451,17 +463,17 @@ header > .container {
 }
 
 /* ---------------OUR CLIENTS--------------- */
-.clients-list {
+.clients__list {
 	display: flex;
 	gap: 30px;
 }
 
-.clients-item {
+.clients__item {
 	width: calc((100%-150px) / 6);
 	height: 92px;
 }
 
-.clients-link {
+.clients__link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -477,8 +489,8 @@ header > .container {
 	transition-timing-function: var(--timing-function), var(--timing-function);
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
 	border-color: var(--accent-color);
 
 	fill: var(--accent-color);
@@ -491,36 +503,33 @@ header > .container {
 	background-color: var(--accent-background-color);
 }
 
-.footer-container {
+.footer__container {
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
 }
 
-.footer-logo {
+.footer__logo {
 	display: block;
 	margin-bottom: 20px;
-
-	color: var(--additional-text-color);
-
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
-	font-size: 26px;
-	line-height: 1.19;
 }
 
-.address-item:not(:last-child) {
+.logo--light {
+	color: var(--additional-text-color);
+}
+
+.address__item:not(:last-child) {
 	margin-bottom: 9px;
 }
 
-.address {
+.address__link {
 	color: var(--additional-text-color);
 
 	font-size: 14px;
 	line-height: 1.71;
 }
 
-.footer-contacts {
+.adress__contacts {
 	color: var(--contacs-color);
 
 	font-size: 14px;
@@ -531,12 +540,12 @@ header > .container {
 	transition-timing-function: var(--timing-function);
 }
 
-.footer-contacts:hover,
-.footer-contacts:focus {
+.adress__contacts:hover,
+.adress__contacts:focus {
 	color: var(--accent-color);
 }
 
-.footer-titles {
+.footer__titles {
 	margin-bottom: 20px;
 
 	font-weight: 700;
@@ -546,17 +555,23 @@ header > .container {
 	color: var(--additional-text-color);
 }
 
-.social-links-list {
+.soc__list {
 	display: flex;
 	gap: 10px;
 }
 
-.footer-social-link {
+.soc__item {
+	width: 44px;
+	height: 44px;
+}
+
+.soc__link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
 	height: 100%;
+
 	border-radius: 50%;
 	background-color: var(--media-background-color);
 
@@ -567,22 +582,22 @@ header > .container {
 	transition-timing-function: var(--timing-function);
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus {
+.soc__link:hover,
+.soc__link:focus {
 	background-color: var(--accent-color);
 }
 
-.footer-form {
+.footer__form {
 	display: flex;
 	align-items: flex-end;
 	gap: 12px;
 }
 
-.footer-label {
+.form__label {
 	display: block;
 }
 
-.footer-input {
+.form__input {
 	padding-right: 16px;
 	padding-left: 16px;
 	width: 358px;
@@ -615,20 +630,22 @@ header > .container {
 	transition-timing-function: var(--timing-function);
 }
 
-.footer-submit {
+.footer__submit {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.footer-submit-icon {
-	margin-left: 10px;
-
+.submit__icon {
 	fill: currentColor;
 }
 
-.footer-submit:hover,
-.footer-submit:focus {
+.submit__icon--append {
+	margin-left: 10px;
+}
+
+.footer__submit:hover,
+.footer__submit:focus {
 	background-color: var(--accent-button-color);
 }
 
@@ -871,17 +888,14 @@ header > .container {
 }
 
 /* -------------------MAIN------------------ */
-.filters-list {
+.filter-buttons {
 	display: flex;
 	justify-content: center;
+	gap: 8px;
 	margin-bottom: 50px;
 }
 
-.filter + .filter {
-	margin-left: 8px;
-}
-
-.filter-btn {
+.filter-buttons__btn {
 	padding: 6px 22px;
 	background-color: var(--secondary-background-color);
 
@@ -897,8 +911,8 @@ header > .container {
 	transition-timing-function: var(--timing-function), var(--timing-function), var(--timing-function);
 }
 
-.filter-btn:hover,
-.filter-btn:focus {
+.filter-buttons__btn:hover,
+.filter-buttons__btn:focus {
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
 		0px 2px 2px rgba(0, 0, 0, 0.12);
 	background-color: var(--accent-color);
