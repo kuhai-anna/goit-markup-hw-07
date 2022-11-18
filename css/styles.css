@@ -604,6 +604,13 @@ address {
 }
 
 .form__input {
+	background-color: transparent;
+
+	border-radius: 4px;
+	outline: transparent;
+}
+
+.footer__input {
 	padding-right: 16px;
 	padding-left: 16px;
 	width: 358px;
@@ -611,12 +618,8 @@ address {
 
 	color: var(--additional-text-color);
 
-	background-color: transparent;
 	border: 1px solid var(--footer-input-border-color);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-
-	border-radius: 4px;
-	outline: transparent;
 }
 
 .submit {
@@ -702,7 +705,7 @@ address {
 	transform: translate(-50%, -50%) scale(0.9);
 }
 
-.button-close {
+.modal__button-close {
 	position: absolute;
 	top: 8px;
 	right: 8px;
@@ -722,12 +725,12 @@ address {
 	transition-timing-function: var(--timing-function);
 }
 
-.button-close:hover,
-.button-close:focus {
+.modal__button-close:hover,
+.modal__button-close:focus {
 	fill: var(--accent-color);
 }
 
-.modal-title {
+.modal__title {
 	margin-bottom: 12px;
 
 	font-weight: 700;
@@ -738,18 +741,21 @@ address {
 	color: var(--title-text-color);
 }
 
-.modal-field {
+.form__field {
 	margin-bottom: 10px;
 }
 
-.input-label,
-.textarea-label {
+.form__label,
+.form__textarea-label {
 	display: block;
+}
 
+.modal__label,
+.modal__textarea-label {
 	margin-bottom: 4px;
 }
 
-.label-text {
+.modal__label-text {
 	display: block;
 
 	font-weight: 400;
@@ -758,48 +764,52 @@ address {
 	letter-spacing: 0.01em;
 }
 
-.input-wrap {
+.form__input-wrap {
 	position: relative;
 }
 
-.modal-input,
-.modal-textarea {
-	width: 100%;
-
+.form__input,
+.form__textarea {
 	background-color: transparent;
 
-	border: 1px solid var(--modal-input-border-color);
 	border-radius: 4px;
 	outline: transparent;
+}
+
+.modal__input,
+.modal__textarea {
+	width: 100%;
+
+	border: 1px solid var(--modal-input-border-color);
 
 	transition-property: border-color;
 	transition-duration: 250ms;
 	transition-timing-function: var(--timing-function);
 }
 
-.modal-input {
+.modal__input {
 	height: 40px;
 	padding-right: 12px;
 	padding-left: 42px;
 }
 
-.modal-textarea-field {
+.form__textarea-field {
 	margin-bottom: 20px;
 }
 
-.modal-textarea {
+.modal__textarea {
 	height: 120px;
 	padding: 12px 16px;
 
 	resize: none;
 }
 
-.modal-input:focus,
-.modal-textarea:focus {
+.modal__input:focus,
+.modal__textarea:focus {
 	border-color: var(--accent-color);
 }
 
-.modal-input-icon {
+.form__input-icon {
 	position: absolute;
 	top: 50%;
 	left: 12px;
@@ -812,11 +822,11 @@ address {
 	transition-timing-function: var(--timing-function);
 }
 
-.modal-input:focus + .modal-input-icon {
+.modal__input:focus + .form__input-icon {
 	fill: var(--accent-color);
 }
 
-.modal-textarea::placeholder {
+.modal__textarea::placeholder {
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 1.17;
@@ -825,11 +835,11 @@ address {
 	color: var(--modal-textarea-color);
 }
 
-.modal-checkbox-field {
+.form__checkbox-field {
 	margin-bottom: 30px;
 }
 
-.label-check {
+.modal__label-check {
 	display: flex;
 	align-items: center;
 	margin-left: 12px;
@@ -839,7 +849,7 @@ address {
 	transition-timing-function: var(--timing-function);
 }
 
-.icon-checkbox {
+.modal__icon-checkbox {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -854,7 +864,7 @@ address {
 	border-radius: 2px;
 }
 
-.label-check-text {
+.modal__check-text {
 	display: flex;
 	margin-right: 5px;
 
@@ -862,28 +872,28 @@ address {
 	line-height: 1.71;
 }
 
-.label-check-link {
+.modal__check-link {
 	color: var(--accent-color);
 }
 
-.input-check:checked + .label-check .icon-checkbox {
+.form__input-check:checked + .modal__label-check .modal__icon-checkbox {
 	fill: var(--additional-text-color);
 	background-color: var(--accent-color);
 	border: transparent;
 }
 
-.input-check:focus + .label-check .icon-checkbox {
+.form__input-check:focus + .modal__label-check .modal__icon-checkbox {
 	border-color: var(--accent-color);
 }
 
-.modal-submit {
+.modal__submit {
 	margin: 0 auto;
 
 	text-align: center;
 }
 
-.modal-submit:hover,
-.modal-submit:focus {
+.modal__submit:hover,
+.modal__submit:focus {
 	background-color: var(--accent-button-color);
 }
 
