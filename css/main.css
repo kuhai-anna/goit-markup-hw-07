@@ -90,13 +90,19 @@ body {
   margin: 0 auto;
 }
 
-button {
+.button {
   display: block;
   font-family: inherit;
   font-size: 16px;
   cursor: pointer;
   border: none;
   border-radius: 4px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+.button:hover, .button:focus {
+  background-color: var(--accent-button-color);
 }
 
 .section__title {
@@ -182,9 +188,6 @@ button {
   color: var(--additional-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
 }
 
 .submit__icon {
@@ -247,6 +250,7 @@ button {
   background-color: transparent;
   border: 1px solid var(--modal-btn-border-color);
   border-radius: 50%;
+  cursor: pointer;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
@@ -412,11 +416,6 @@ button {
   text-align: center;
 }
 
-.modal__submit:hover,
-.modal__submit:focus {
-  background-color: var(--accent-button-color);
-}
-
 .header__container {
   display: flex;
   align-items: center;
@@ -565,14 +564,6 @@ button {
   line-height: 1.87;
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-}
-
-.hero__btn:hover,
-.hero__btn:focus {
-  background-color: var(--accent-button-color);
 }
 
 .features__icon-list {
