@@ -58,6 +58,7 @@
 	background-color: transparent;
 	border: 1px solid var(--modal-btn-border-color);
 	border-radius: 50%;
+	cursor: pointer;
 
 	transition-property: fill;
 	transition-duration: 250ms;
@@ -222,9 +223,4 @@
 	margin: 0 auto;
 
 	text-align: center;
-}
-
-.modal__submit:hover,
-.modal__submit:focus {
-	background-color: var(--accent-button-color);
 }
