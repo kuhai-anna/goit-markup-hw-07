@@ -43,13 +43,4 @@
 	letter-spacing: 0.06em;
 
 	background-color: var(--accent-color);
-
-	transition-property: background-color;
-	transition-duration: 250ms;
-	transition-timing-function: var(--timing-function);
-}
-
-.hero__btn:hover,
-.hero__btn:focus {
-	background-color: var(--accent-button-color);
 }
