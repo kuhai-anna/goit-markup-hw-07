@@ -21,23 +21,22 @@
 	padding-bottom: 30px;
 }
 
+.people-list__name,
+.people-list__position {
+	@include font(null, 16px, 1.19, null);
+	text-align: center;
+}
+
 .people-list__name {
 	margin-bottom: 10px;
 
 	color: var(--title-text-color);
 
 	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.19;
-	text-align: center;
 }
 
 .people-list__position {
 	margin-bottom: 16px;
-
-	font-size: 16px;
-	line-height: 1.19;
-	text-align: center;
 }
 
 .team__soc {

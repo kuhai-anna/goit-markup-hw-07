@@ -24,8 +24,7 @@
 	fill: var(--icons-color);
 
 	transition-property: background-color, fill;
-	transition-duration: 250ms, 250ms;
-	transition-timing-function: var(--timing-function), var(--timing-function);
+	@extend %transition;
 
 	&:hover,
 	&:focus {
@@ -40,8 +39,7 @@
 	fill: var(--additional-text-color);
 
 	transition-property: background-color;
-	transition-duration: 250ms;
-	transition-timing-function: var(--timing-function);
+	@extend %transition;
 
 	&:hover,
 	&:focus {

@@ -12,10 +12,7 @@
 .modal__label-text {
 	display: block;
 
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 1.17;
-	letter-spacing: 0.01em;
+	@include font(null, 12px, 1.17, 0.01em);
 }
 
 .modal__input-wrap {
@@ -32,9 +29,7 @@
 	outline: transparent;
 	border: 1px solid var(--modal-input-border-color);
 
-	transition-property: border-color;
-	transition-duration: 250ms;
-	transition-timing-function: var(--timing-function);
+	@extend %transition-border-color;
 }
 
 .modal__input {
@@ -61,10 +56,7 @@
 		border-color: var(--accent-color);
 	}
 	&::placeholder {
-		font-weight: 400;
-		font-size: 12px;
-		line-height: 1.17;
-		letter-spacing: 0.01em;
+		@include font(null, 12px, 1.17, 0.01em);
 
 		color: var(--modal-textarea-color);
 	}
@@ -78,9 +70,7 @@
 
 	margin-right: 12px;
 
-	transition-property: fill;
-	transition-duration: 250ms;
-	transition-timing-function: var(--timing-function);
+	@extend %transition-fill;
 
 	.modal__input:focus + & {
 		fill: var(--accent-color);
@@ -97,14 +87,11 @@
 	margin-left: 12px;
 
 	transition-property: border-color;
-	transition-duration: 250ms;
-	transition-timing-function: var(--timing-function);
+	@extend %transition;
 }
 
 .modal__icon-checkbox {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@extend %flex-centring;
 	width: 16px;
 	height: 15px;
 	margin-right: 8px;
@@ -129,8 +116,7 @@
 	display: flex;
 	margin-right: 5px;
 
-	font-weight: 400;
-	line-height: 1.71;
+	@include font(null, null, 1.71, null);
 }
 
 .modal__check-link {

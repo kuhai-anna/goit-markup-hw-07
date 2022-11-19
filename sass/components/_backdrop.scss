@@ -10,8 +10,7 @@
 	opacity: 1;
 	visibility: visible;
 	transition-property: opacity, visibility;
-	transition-duration: 250ms, 250ms;
-	transition-timing-function: var(--timing-function), var(--timing-function);
+	@extend %transition;
 
 	&.is-hidden {
 		opacity: 0;

@@ -9,8 +9,7 @@
 	border-radius: 4px;
 
 	transition-property: background-color;
-	transition-duration: 250ms;
-	transition-timing-function: var(--timing-function);
+	@extend %transition;
 
 	&:hover,
 	&:focus {

@@ -4,7 +4,7 @@
 }
 
 .logo-list__item {
-	width: calc((100%-150px) / 6);
+	width: 170px;
 	height: 92px;
 }
 
@@ -20,8 +20,7 @@
 	fill: var(--icons-color);
 
 	transition-property: border-color, fill;
-	transition-duration: 250ms, 250ms;
-	transition-timing-function: var(--timing-function), var(--timing-function);
+	@extend %transition;
 
 	&:hover,
 	&:focus {

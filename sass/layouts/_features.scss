@@ -23,13 +23,10 @@
 
 	color: var(--title-text-color);
 
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 1.14;
+	@include font(null, 14px, 1.14, null);
 	text-transform: uppercase;
 }
 
 .icon-list__text {
-	font-size: 14px;
-	line-height: 1.71;
+	@include font(null, null, 1.71, null);
 }

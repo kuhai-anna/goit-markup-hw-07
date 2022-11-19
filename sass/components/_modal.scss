@@ -13,9 +13,7 @@
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 
-	transition-property: transform;
-	transition-duration: 250ms;
-	transition-timing-function: var(--timing-function);
+	@extend %transition-transform;
 
 	.backdrop.is-hidden & {
 		transform: translate(-50%, -50%) scale(0.9);
@@ -39,8 +37,7 @@
 	cursor: pointer;
 
 	transition-property: fill;
-	transition-duration: 250ms;
-	transition-timing-function: var(--timing-function);
+	@extend %transition;
 
 	&:hover,
 	&:focus {
@@ -51,9 +48,7 @@
 .modal__title {
 	margin-bottom: 12px;
 
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 1.15;
+	@include font(700, 20px, 1.15, null);
 	text-align: center;
 
 	color: var(--title-text-color);

@@ -26,14 +26,10 @@
 
 	color: var(--title-text-color);
 
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
+	@include font(500, null, 1.14, 0.02em);
 
 	transition-property: color;
-	transition-duration: 250ms;
-	transition-timing-function: var(--timing-function);
+	@extend %transition;
 
 	&:hover,
 	&:focus {
@@ -53,8 +49,7 @@
 
 		transform: scaleX(0);
 		transition-property: transform;
-		transition-duration: 250ms;
-		transition-timing-function: var(--timing-function);
+		@extend %transition;
 	}
 	&:hover:after,
 	&:focus:after {
@@ -96,14 +91,10 @@
 
 	color: var(--primary-text-color);
 
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
+	@include font(500, null, 1.14, 0.02em);
 
 	transition-property: color;
-	transition-duration: 250ms;
-	transition-timing-function: var(--timing-function);
+	@extend %transition;
 
 	&:hover,
 	&:focus {
