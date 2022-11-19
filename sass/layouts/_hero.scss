@@ -32,7 +32,10 @@
 	text-transform: uppercase;
 }
 
-.btn {
+.hero__btn {
+	padding: 10px 32px;
+	margin: 0 auto;
+
 	color: var(--additional-text-color);
 
 	font-weight: 700;
@@ -44,11 +47,6 @@
 	transition-property: background-color;
 	transition-duration: 250ms;
 	transition-timing-function: var(--timing-function);
-}
-
-.hero__btn {
-	padding: 10px 32px;
-	margin: 0 auto;
 }
 
 .btn:hover,
