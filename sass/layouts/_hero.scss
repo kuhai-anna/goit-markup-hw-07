@@ -49,7 +49,7 @@
 	transition-timing-function: var(--timing-function);
 }
 
-.btn:hover,
-.btn:focus {
+.hero__btn:hover,
+.hero__btn:focus {
 	background-color: var(--accent-button-color);
 }
