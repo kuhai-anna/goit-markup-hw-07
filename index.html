@@ -18,7 +18,8 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<link href="./css/styles.css" rel="stylesheet" />
+		<!-- <link href="./css/styles.css" rel="stylesheet" /> -->
+		<link rel="stylesheet" href="./css/main.min.css" />
 	</head>
 
 	<body class="site-body">
@@ -167,7 +168,7 @@
 							<div class="people-list__wrap">
 								<h3 class="people-list__name">Ігор Дем'яненко</h3>
 								<p class="people-list__position" lang="en">Product Designer</p>
-								<ul class="list soc">
+								<ul class="list soc team__soc">
 									<li class="soc__item">
 										<a
 											class="link soc__link soc__link--light-bgd"
@@ -562,13 +563,13 @@
 					</ul>
 				</div>
 				<div class="form-container">
-					<form class="form footer__form">
-						<div class="form__field">
-							<label class="footer__titles form__label" for="footer-user-email"
-								><span class="form__label-text">Підпишіться на розсилку</span></label
+					<form class="footer__form">
+						<div class="footer__form-field">
+							<label class="footer__titles footer__label" for="footer-user-email"
+								><span class="foooter__label-text">Підпишіться на розсилку</span></label
 							>
 							<input
-								class="form__input footer__input"
+								class="footer__input"
 								name="user-email"
 								type="email"
 								placeholder="E-mail"
@@ -595,32 +596,32 @@
 					</svg>
 				</button>
 				<p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
-				<form class="form modal__form">
-					<div class="form__field modal__field">
-						<label class="form__label modal__label" for="user-name">
-							<span class="form__label-text modal__label-text">Ім'я</span>
+				<form class="modal__form">
+					<div class="modal__form-field">
+						<label class="modal__label" for="user-name">
+							<span class="modal__label-text">Ім'я</span>
 						</label>
-						<div class="form__input-wrap">
+						<div class="modal__input-wrap">
 							<input
-								class="form__input modal__input"
+								class="modal__input"
 								name="user-name"
 								type="text"
 								maxlength="25"
 								id="user-name"
 								required
 							/>
-							<svg class="form__input-icon" width="18" height="18">
+							<svg class="modal__input-icon" width="18" height="18">
 								<use class="icon-person" href="./images/sprite.svg#modal-person"></use>
 							</svg>
 						</div>
 					</div>
-					<div class="form__field modal__field">
-						<label class="form__label modal__label" for="user-tel">
-							<span class="form__label-text modal__label-text">Телефон</span>
+					<div class="modal__form-field">
+						<label class="modal__label" for="user-tel">
+							<span class="modal__label-text">Телефон</span>
 						</label>
-						<div class="form__input-wrap">
+						<div class="modal__input-wrap">
 							<input
-								class="form__input modal__input"
+								class="modal__input"
 								name="user-tel"
 								type="tel"
 								minlength="10"
@@ -628,46 +629,41 @@
 								id="user-tel"
 								required
 							/>
-							<svg class="form__input-icon" width="18" height="18">
+							<svg class="modal__input-icon" width="18" height="18">
 								<use class="icon-phone" href="./images/sprite.svg#modal-phone"></use>
 							</svg>
 						</div>
 					</div>
-					<div class="form__field modal__field">
-						<label class="form__label modal__label" for="user-email">
-							<span class="form__label-text modal__label-text">Пошта</span>
+					<div class="modal__form-field">
+						<label class="modal__label" for="user-email">
+							<span class="modal__label-text">Пошта</span>
 						</label>
-						<div class="form__input-wrap">
-							<input
-								class="form__input modal__input"
-								name="user-email"
-								type="email"
-								id="user-email"
-							/>
-							<svg class="form__input-icon" width="18" height="18">
+						<div class="modal__input-wrap">
+							<input class="modal__input" name="user-email" type="email" id="user-email" />
+							<svg class="modal__input-icon" width="18" height="18">
 								<use class="icon-email" href="./images/sprite.svg#modal-email"></use>
 							</svg>
 						</div>
 					</div>
-					<div class="form__textarea-field">
-						<label class="form__textarea-label modal__textarea-label" for="user-comment">
-							<span class="form__label-text modal__label-text">Коментар</span>
+					<div class="modal__textarea-field">
+						<label class="modal__textarea-label" for="user-comment">
+							<span class="modal__label-text">Коментар</span>
 						</label>
 						<textarea
-							class="form__textarea modal__textarea"
+							class="modal__textarea"
 							name="user-comment"
 							id="user-comment"
 							placeholder="Введіть текст"
 						></textarea>
 					</div>
-					<div class="form__checkbox-field">
+					<div class="modal__checkbox-field">
 						<input
-							class="form__input-check visually-hidden"
+							class="modal__input-check visually-hidden"
 							type="checkbox"
 							name="privacy"
 							id="privacy"
 						/>
-						<label class="form__label-check modal__label-check" for="privacy">
+						<label class="modal__label-check" for="privacy">
 							<span class="modal__icon-checkbox">
 								<svg class="modal__check-icon" width="16" height="15">
 									<use class="icon-check" href="./images/sprite.svg#icon-check"></use>

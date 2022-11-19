@@ -1,0 +1,35 @@
+.features__icon-list {
+	display: flex;
+	gap: 30px;
+}
+
+.icon-list__wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 270px;
+	height: 120px;
+
+	border-radius: 4px;
+	background-color: var(--secondary-background-color);
+}
+
+.icon-list__wrap--above-text {
+	margin-bottom: 30px;
+}
+
+.icon-list__title {
+	margin-bottom: 10px;
+
+	color: var(--title-text-color);
+
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+}
+
+.icon-list__text {
+	font-size: 14px;
+	line-height: 1.71;
+}
