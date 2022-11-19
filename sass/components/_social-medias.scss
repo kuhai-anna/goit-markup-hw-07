@@ -26,12 +26,12 @@
 	transition-property: background-color, fill;
 	transition-duration: 250ms, 250ms;
 	transition-timing-function: var(--timing-function), var(--timing-function);
-}
 
-.soc__link--light-bgd:hover,
-.soc__link--light-bgd:focus {
-	background-color: var(--accent-color);
-	fill: var(--additional-text-color);
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+		fill: var(--additional-text-color);
+	}
 }
 
 .soc__link--dark-bgd {
@@ -42,9 +42,9 @@
 	transition-property: background-color;
 	transition-duration: 250ms;
 	transition-timing-function: var(--timing-function);
-}
 
-.soc__link--dark-bgd:hover,
-.soc__link--dark-bgd:focus {
-	background-color: var(--accent-color);
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+	}
 }

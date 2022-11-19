@@ -22,11 +22,11 @@
 	transition-property: border-color, fill;
 	transition-duration: 250ms, 250ms;
 	transition-timing-function: var(--timing-function), var(--timing-function);
-}
 
-.logo-list__link:hover,
-.logo-list__link:focus {
-	border-color: var(--accent-color);
+	&:hover,
+	&:focus {
+		border-color: var(--accent-color);
 
-	fill: var(--accent-color);
+		fill: var(--accent-color);
+	}
 }

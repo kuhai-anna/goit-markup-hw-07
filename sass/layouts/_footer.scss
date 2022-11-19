@@ -15,8 +15,10 @@
 	margin-bottom: 20px;
 }
 
-.address__item:not(:last-child) {
-	margin-bottom: 9px;
+.address__item {
+	&:not(:last-child) {
+		margin-bottom: 9px;
+	}
 }
 
 .address__link {
@@ -35,11 +37,11 @@
 	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: var(--timing-function);
-}
 
-.adress__contacts:hover,
-.adress__contacts:focus {
-	color: var(--accent-color);
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
 }
 
 .footer__titles {
